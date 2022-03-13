@@ -1,0 +1,1498 @@
+/*
+Theme Name: openlands
+Theme URI: http://sitename.com/
+Author: the WordPress custom theme
+Author URI: https://www.linkedin.com/
+Description: Personal blog theme
+Tags: blog
+Version: 1.0
+Requires at least: 5.4
+Tested up to: 7.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: em4
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/*@font-face {*/
+/*    font-family: 'Poster Gothic Round ExCond ATF';*/
+/*    src: url('assets/fonts/PosterGothicRoundExCondATF.eot');*/
+/*    src: url('assets/fonts/PosterGothicRoundExCondATF.eot?#iefix') format('embedded-opentype'),*/
+/*    url('assets/fonts/PosterGothicRoundExCondATF.woff2') format('woff2'),*/
+/*    url('assets/fonts/PosterGothicRoundExCondATF.woff') format('woff'),*/
+/*    url('assets/fonts/PosterGothicRoundExCondATF.ttf') format('truetype');*/
+/*    font-weight: 500;*/
+/*    font-style: normal;*/
+/*    font-display: swap;*/
+/*}*/
+
+
+@font-face {
+    font-family: 'Freigeist Con';
+    src: url('assets/fonts/Freigeist-ConMedium.eot');
+    src: url('assets/fonts/Freigeist-ConMedium.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-ConMedium.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-ConMedium.woff') format('woff'),
+    url('assets/fonts/Freigeist-ConMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist Con';
+    src: url('assets/fonts/Freigeist-ConRegular.eot');
+    src: url('assets/fonts/Freigeist-ConRegular.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-ConRegular.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-ConRegular.woff') format('woff'),
+    url('assets/fonts/Freigeist-ConRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist Con';
+    src: url('assets/fonts/Freigeist-ConLight.eot');
+    src: url('assets/fonts/Freigeist-ConLight.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-ConLight.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-ConLight.woff') format('woff'),
+    url('assets/fonts/Freigeist-ConLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist';
+    src: url('assets/fonts/Freigeist-Light.eot');
+    src: url('assets/fonts/Freigeist-Light.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-Light.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-Light.woff') format('woff'),
+    url('assets/fonts/Freigeist-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist Con';
+    src: url('assets/fonts/Freigeist-ConBold.eot');
+    src: url('assets/fonts/Freigeist-ConBold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-ConBold.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-ConBold.woff') format('woff'),
+    url('assets/fonts/Freigeist-ConBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist';
+    src: url('assets/fonts/Freigeist-Bold.eot');
+    src: url('assets/fonts/Freigeist-Bold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-Bold.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-Bold.woff') format('woff'),
+    url('assets/fonts/Freigeist-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist Wide';
+    src: url('assets/fonts/Freigeist-WideRegular.eot');
+    src: url('assets/fonts/Freigeist-WideRegular.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-WideRegular.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-WideRegular.woff') format('woff'),
+    url('assets/fonts/Freigeist-WideRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist Wide';
+    src: url('assets/fonts/Freigeist-WideBold.eot');
+    src: url('assets/fonts/Freigeist-WideBold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-WideBold.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-WideBold.woff') format('woff'),
+    url('assets/fonts/Freigeist-WideBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist';
+    src: url('assets/fonts/Freigeist-Regular.eot');
+    src: url('assets/fonts/Freigeist-Regular.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-Regular.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-Regular.woff') format('woff'),
+    url('assets/fonts/Freigeist-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist XWide';
+    src: url('assets/fonts/Freigeist-XWideBold.eot');
+    src: url('assets/fonts/Freigeist-XWideBold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-XWideBold.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-XWideBold.woff') format('woff'),
+    url('assets/fonts/Freigeist-XWideBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist XWide';
+    src: url('assets/fonts/Freigeist-XWideRegular.eot');
+    src: url('assets/fonts/Freigeist-XWideRegular.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-XWideRegular.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-XWideRegular.woff') format('woff'),
+    url('assets/fonts/Freigeist-XWideRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Freigeist XWide';
+    src: url('assets/fonts/Freigeist-XWideMedium.eot');
+    src: url('assets/fonts/Freigeist-XWideMedium.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Freigeist-XWideMedium.woff2') format('woff2'),
+    url('assets/fonts/Freigeist-XWideMedium.woff') format('woff'),
+    url('assets/fonts/Freigeist-XWideMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: #40B6FB;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+img {
+    width: auto;
+    height: auto;
+}
+
+*:focus {
+    outline: none;
+}
+
+::marker {
+    color: #C69470;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+.wr {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 1024px) {
+    .site-main {
+        padding: 0px !important;
+        flex: 0 0 100% !important;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .wr {
+        padding-top: 0px;
+    }
+
+    .site-main {
+        padding: 0px !important;
+    }
+
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+}
+
+pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+a {
+    background-color: transparent;
+}
+abbr[title] {
+    border-bottom: none; /* 1 */
+    text-decoration: underline; /* 2 */
+    text-decoration: underline dotted; /* 2 */
+}
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+img {
+    border-style: none;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+
+button,
+input { /* 1 */
+    overflow: visible;
+}
+
+button,
+select { /* 1 */
+    text-transform: none;
+}
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: 23px;
+}
+
+legend {
+    box-sizing: border-box; /* 1 */
+    color: inherit; /* 2 */
+    display: table; /* 1 */
+    max-width: 100%; /* 1 */
+    padding: 0; /* 3 */
+    white-space: normal; /* 1 */
+}
+progress {
+    vertical-align: baseline;
+}
+textarea {
+    overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+details {
+    display: block;
+}
+summary {
+    display: list-item;
+}
+template {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+
+/*global style*/
+
+.noselect {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -khtml-user-select: none;
+}
+
+.content_width {
+    max-width: 1312px;
+    padding: 0 1rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media only screen and (max-width: 1440px) {
+    .content_width {
+        max-width: 1312px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .content_width {
+        max-width: 960px;
+    }
+}
+.df {
+    display: flex;
+}
+.dfsb {
+    display: flex;
+    justify-content: space-between;
+}
+.dfai {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dffw {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.f_50 {
+   flex: 0 0 50%;
+}
+.f_33 {
+    flex: 0 0 33%;
+}
+.text {
+    font-family: 'Roboto', sans-serif;
+}
+@media only screen and (min-width: 1024px) {
+
+}
+@media only screen and (max-width: 1440px) {
+
+}
+
+
+
+/*baner*/
+.baner {
+    min-height: 1300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 330px;
+}
+.baner_title {
+    font-family: 'Freigeist XWide';
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 94px;
+    text-align: center;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFCF00;
+    margin-bottom: 140px;
+}
+.baner_descr {
+    max-width: 580px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: 'Freigeist';
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 32px;
+}
+.cf_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+    position: relative;
+}
+.wpcf7-spinner {
+    position: absolute !important;
+}
+.cf_field span select,
+.cf_field span input,
+.cf_submit input,
+.nice-select.wpcf7-form-control.wpcf7-select {
+    width: 267px;
+    height: 57px;
+    background: rgba(0, 0, 0, 0.22);
+    border: 1.5px solid #FFCF00;
+    box-sizing: border-box;
+    backdrop-filter: blur(2px);
+    font-size: 16px;
+}
+.cf_submit input {
+    background: #FFCF00;
+    font-family: Freigeist XWide;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    width: 174px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.nice-select .option:hover,
+.nice-select .option.focus,
+.nice-select .option.selected.focus,
+.cf_field .nice-select .list {
+    background-color: rgba(0, 0, 0, 0.22) !important;
+    box-sizing: border-box;
+    backdrop-filter: blur(2px);
+    color: #FFCF00 !important;
+}
+.cf_field .nice-select .list {
+    border: 1.5px solid #FFCF00;
+}
+.cf_field span input {
+    padding: 0 24px;
+}
+.nice-select span {
+    font-family: "Freigeist XWide";
+    color: #FFFFFF !important;
+    font-weight: 500;
+}
+.nice-select.open > ul > li.option {
+    color: #FFCF00 !important;
+    font-family: "Freigeist XWide";
+}
+.nice-select.open > ul > li.option:hover,
+.nice-select.open > ul > li.option.focus,
+.nice-select.open > ul > li.option.selected.focus {
+    color: #FFFFFF !important;
+}
+.nice-select:after {
+    width: 11px;
+    height: 16px;
+    transform: rotate(180deg);
+    margin-top: -12px;
+    border-bottom: transparent;
+    border-right: transparent;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='14' viewBox='0 0 12 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.216 13.064H5.072L5.312 3.048C4.8 5.864 2.576 7.288 0.464 7.288V4.792C3.552 4.792 5.248 3.672 5.248 0.136H7.04C7.04 3.672 8.736 4.792 11.824 4.792V7.288C9.728 7.288 7.488 5.88 6.992 3.096L7.216 13.064Z' fill='%23FFCF00'/%3E%3C/svg%3E%0A");
+}
+.nice-select.open:after {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    margin-top: -7px;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #FFFFFF !important;
+    font-family: "Freigeist XWide";
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #FFFFFF !important;
+    font-family: "Freigeist XWide";
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #FFFFFF !important;
+    font-family: "Freigeist XWide";
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #FFFFFF !important;
+    font-family: "Freigeist XWide";
+
+}
+.wpcf7 form .wpcf7-response-output {
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.baner_apps_title {
+    max-width: 580px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: 'Freigeist';
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+.baner_apps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+.baner_app {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+/*baner end*/
+
+
+
+
+/*green_phone*/
+
+.green_phone {
+    position: relative;
+    z-index: 1;
+    margin-top: -60px;
+    padding: 170px 0 300px;
+    background: #2F4231;
+    border-radius: 60px 60px 0px 0px;
+}
+.green_phone_content {
+    display: flex;
+    justify-content: space-around;
+}
+.gp_left,
+.gp_right {
+    max-width: 295px;
+    text-align: center;
+}
+.gp_left span,
+.gp_right span {
+    font-family: "Freigeist XWide";
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFCF00;
+    display: block;
+    margin: 32px 0px;
+}
+.gp_center {
+    position: relative;
+}
+.green_phone_center {
+    position: relative;
+    min-width: 340px;
+}
+.gp_center_img {
+    position: absolute;
+    top: -310px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.gp_center_img img {
+    min-width: 340px;
+}
+.gp_center_list {
+    position: absolute;
+    top: -220px;
+    z-index: 2;
+    right: -250px;
+}
+.gp_center_item {
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-family: "Freigeist XWide";
+    font-size: 16px;
+    line-height: 19px;
+    color: #005459;
+    border-radius: 100px;
+    margin-bottom: 16px;
+    width: max-content;
+}
+.gp_center_item:last-child {
+    margin-bottom: 0px;
+}
+/*green_phone end*/
+
+
+
+/*back_logos*/
+.black_logos_title {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: rgb(255 255 255 / 50%);
+    opacity: 0.5;
+}
+.black_logos {
+    position: relative;
+    background: #000000;
+    border-radius: 60px 60px 0px 0px;
+    min-height: 380px;
+    margin-top: -60px;
+    z-index: 2;
+    padding-top: 65px;
+}
+.black_logos_slider {
+    margin-top: 64px;
+}
+.black_logo img {
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+.black_logo img:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+/*back_logos end*/
+
+/*partnerships_logos*/
+.partnerships_logos_title {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: rgb(255 255 255 / 50%);
+    opacity: 0.5;
+}
+.partnerships_logos {
+    position: relative;
+    background: #005459;
+    border-radius: 60px 60px 0px 0px;
+    min-height: 380px;
+    margin-top: -60px;
+    z-index: 2;
+    padding-top: 65px;
+}
+.partnerships_logos_slider {
+    margin-top: 64px;
+}
+.partnerships_logo img {
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+.partnerships_logo img:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+/*back_logos end*/
+
+
+/*manifesto*/
+.manifesto {
+    position: relative;
+    background: #78174D;
+    border-radius: 60px 60px 0px 0px;
+    margin-top: -60px;
+    z-index: 3;
+    padding-top: 65px;
+}
+.manifesto_title {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.manifesto_words {
+    margin-top: 88px;
+    padding-bottom: 80px;
+}
+.manifesto_line_1 {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44.7312px;
+    line-height: 54px;
+    text-transform: uppercase;
+    color: #ED6956;
+    text-align: justify;
+    text-align-last: justify;
+}
+.manifesto_line_2 {
+    font-family: 'Freigeist Con';
+    font-weight: bold;
+    font-size: 110px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    color: #ED6956;
+    text-transform: uppercase;
+    text-align: justify;
+    text-align-last: justify;
+}
+.manifesto_line_3 {
+    font-family: 'Freigeist';
+    font-weight: normal;
+    font-size: 68px;
+    line-height: 84px;
+    display: flex;
+    align-items: center;
+    color: #ED6956;
+    text-transform: uppercase;
+    text-align: justify;
+    text-align-last: justify;
+}
+.manifesto_line_4 {
+    font-family: Freigeist XWide;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 54.6822px;
+    line-height: 64px;
+    color: #ED6956;
+    text-transform: uppercase;
+    text-align: justify;
+    text-align-last: justify;
+}
+.manifesto_line_5 {
+    font-family: 'Freigeist Con';
+    font-weight: 300;
+    font-size: 52.5359px;
+    line-height: 87px;
+    display: flex;
+    align-items: center;
+    color: #ED6956;
+    text-transform: uppercase;
+    text-align: justify;
+    text-align-last: justify;
+}
+.manifesto_line_6 {
+    font-family: Freigeist XWide;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 61.6822px;
+    line-height: 64px;
+    color: #ED6956;
+    text-transform: uppercase;
+    text-align: justify;
+    text-align-last: justify;
+}
+/*manifesto end*/
+
+
+
+/*landejer*/
+.landejer {
+    position: relative;
+    background: #E0E6E0;
+    border-radius: 60px 60px 0px 0px;
+    margin-top: -60px;
+    z-index: 4;
+    padding-top: 65px;
+    padding-bottom: 100px;
+}
+.landejer_name {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.landejer_top {
+    display: flex;
+    justify-content: space-between;
+    padding: 88px 0 110px;
+}
+.landejer_title {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 96px;
+    color: #005459;
+    max-width: 620px;
+}
+.landejer_title span {
+    font-weight: bold;
+}
+
+
+.landejer_app {
+    display: flex;
+    justify-content: space-between;
+}
+.landejer_app_content {
+    display: flex;
+    flex: 0 0 50%;
+}
+.landejer_app_list {
+    flex: 0 0 50%;
+    width: 100%;
+    padding-left: 90px;
+}
+.landejer_app_item {
+    font-family: 'Freigeist XWide';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 65px;
+    color: #000000;
+    position: relative;
+    padding: 0 0 0 59px;
+    margin-bottom: 64px;
+}
+.landejer_app_item:last-child {
+    margin-bottom: 0px;
+}
+.landejer_app_item:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translate(0, 50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35px;
+    height: 3px;
+    background: #000000;
+}
+
+
+.landejer_phone img {
+    max-width: 306px;
+}
+
+.landejer_phone {
+    margin-right: 22px;
+}
+.landejer_phone img {
+    box-shadow: 0px 30.4124px 30.4124px 10.1375px rgba(0, 0, 0, 0.15);
+    border-radius: 35.4812px;
+}
+.landejer_rated {
+    background: #FFFFFF;
+    box-shadow: 0px 27.1994px 27.1994px 9.06648px rgba(0, 0, 0, 0.15);
+    border-radius: 31.7327px;
+    padding: 21px 21px 7px 21px;
+    margin-bottom: 50px;
+}
+.landejer_app_title {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10.8798px;
+    line-height: 13px;
+    letter-spacing: 0.226662px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.landejer_rated_list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 340px;
+}
+.landejer_rated_item {
+    flex: 0 0 50%;
+    display: flex;
+    margin-bottom: 14px;
+}
+.landejer_rated_logo {
+    margin-right: 9px;
+}
+.landejer_rated_logo img {
+    max-width: 36px;
+}
+.landejer_rated_title {
+    font-family: "Freigeist Con";
+    font-weight: 500;
+    font-size: 10.8798px;
+    line-height: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.landejer_rated_title span {
+    display: block;
+    font-weight: 400;
+}
+
+
+
+.landejer_indtjening {
+    background: #FFFFFF;
+    border-radius: 10.0306px;
+    padding: 35px 24px 24px 24px;
+    max-width: 330px;
+}
+.landejer_indtjening_title {
+    font-family: "Freigeist Con";
+    font-size: 14.0428px;
+    line-height: 16px;
+    letter-spacing: 0.29569px;
+    color: #2E2218;
+}
+.landejer_indtjening_title span {
+    display: block;
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 550;
+    font-size: 24.0734px;
+    line-height: 29px;
+    letter-spacing: 0.451376px;
+    color: #2E2218;
+}
+.landejer_indtjening_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    margin-right: -6px;
+    align-items: end;
+}
+.landejer_indtjening_item {
+    padding: 0 6px;
+    flex: 0 0 33.333%;
+}
+.landejer_indtjening_info {
+    border-radius: 7.02141px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-family: "Freigeist Con";
+    font-size: 12.0367px;
+    line-height: 14px;
+}
+.landejer_indtjening_info span {
+    display: block;
+    font-family: "Freigeist Con";
+    font-weight: bold;
+    font-size: 14.0428px;
+    line-height: 16px;
+}
+/*landejer end*/
+
+
+
+/*hunter*/
+.hunter {
+    position: relative;
+    background: #D9DEDE;
+    border-radius: 60px 60px 0px 0px;
+    margin-top: -60px;
+    z-index: 4;
+    padding-top: 65px;
+    padding-bottom: 100px;
+}
+.hunter_name {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.hunter_top {
+    display: flex;
+    justify-content: space-between;
+    padding: 88px 0 110px;
+}
+.hunter_title {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 96px;
+    color: #005459;
+    max-width: 620px;
+}
+.hunter_title span {
+    font-weight: bold;
+}
+
+
+.hunter_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.hunter_list {
+    flex: 0 0 50%;
+}
+.hunter_app {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.hunter_list_item {
+    font-family: 'Freigeist XWide';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 65px;
+    color: #000000;
+    position: relative;
+    padding: 0 0 0 59px;
+    margin-bottom: 64px;
+}
+.hunter_list_item:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 0;
+    transform: translate(0, 50%);
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 3px;
+    background: #000000;
+}
+.hunter_list_item:last-child {
+    margin-bottom: 0px;
+}
+
+
+.hunter_screan {
+    margin-left: 22px;
+}
+.hunter_screan img {
+    max-width: 295px;
+    box-shadow: 0px 29.3558px 29.3558px 9.78528px rgba(0, 0, 0, 0.15);
+    border-radius: 34.2485px;
+}
+.hunter_pay_img {
+    margin-bottom: 56px;
+}
+.hunter_pay_img img {
+    max-width: 280px;
+    box-shadow: 0px 21.5034px 21.5034px 7.16782px rgba(0, 0, 0, 0.15);
+    border-radius: 34.2485px;
+}
+
+
+.hunter_pay_item {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 29.3558px;
+    padding: 14px 14px 14px 57px;
+    margin-bottom: 16px;
+    max-width: 220px;
+    width: 100%;
+}
+.hunter_pay_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hunter_pay_item {
+
+}
+.hunter_pay_item:first-child:after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 8px;
+    z-index: 1;
+    transform: translate(0, -50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 29.3558px;
+    width: 31px;
+    height: 31px;
+    opacity: 1;
+    background-image: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.853516' y='0.849609' width='31.3129' height='31.3129' rx='15.6564' fill='%2378174D'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M22.381 13.5723L15.0163 20.4226L11.6172 16.9975' fill='%2378174D'/%3E%3Cpath d='M22.381 13.5723L15.0163 20.4226L11.6172 16.9975' stroke='white' stroke-width='2.01036' stroke-linecap='square'/%3E%3C/svg%3E%0A");
+}
+.hunter_pay_item:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 8px;
+    transform: translate(0, -50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #E4DFD9;
+    opacity: 0.4;
+    border-radius: 29.3558px;
+    width: 31px;
+    height: 31px;
+}
+
+/*hunter end*/
+
+
+/*location*/
+.location {
+    position: relative;
+    background: #000000;
+    border-radius: 60px 60px 0px 0px;
+    margin-top: -60px;
+    z-index: 5;
+    padding-top: 65px;
+    padding-bottom: 200px;
+}
+.location_name {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.location_slides {
+    margin-top: 48px;
+}
+.location_slide_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.location_slide_meta {
+    flex: 0 0 414px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.location_slide_title {
+    color: #FFFFFF;
+    font-family: Freigeist;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 54px;
+    line-height: 65px;
+}
+.location_slide_name {
+    color: #FFFFFF;
+    font-family: "Freigeist Wide";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+}
+.location_slide_geo {
+    color: #FFFFFF;
+    font-family: "Freigeist Wide";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+.location_slide_text {
+    color: #FFFFFF;
+    font-family: "Freigeist Wide";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 50px;
+}
+.location_slide_bi img {
+    border-radius: 35px;
+}
+.location_slide_si img {
+    border-radius: 35px;
+}
+.location_slide_images {
+    position: relative;
+}
+.location_slide_si {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.location_slide_bi {
+    margin-left: -146px;
+    margin-right: 146px;
+}
+/*location end*/
+
+
+/*video*/
+.video {
+    position: relative;
+    background: #000000;
+    border-radius: 60px 60px 0px 0px;
+    margin-top: -60px;
+    z-index: 6;
+    padding-top: 65px;
+    padding-bottom: 200px;
+}
+.video_title {
+    font-family: Freigeist;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 54px;
+    line-height: 65px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 48px 0;
+}
+.video_wrapper{
+    display:table;
+    width:auto;
+    position:relative;
+    width:100%;
+}
+.video_item {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+}
+.playpause {
+    background-image:url(/wp-content/uploads/2022/03/play.svg);
+    background-repeat:no-repeat;
+    position:absolute;
+    left:0%;
+    right:0%;
+    top:0%;
+    bottom:0%;
+    margin:auto;
+    background-size:contain;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+}
+/*video end*/
+
+
+
+/*hit*/
+.hit {
+    position: relative;
+    background: #78174D;
+    border-radius: 60px 60px 0px 0px;
+    margin-top: -60px;
+    z-index: 7;
+    padding-top: 65px;
+    padding-bottom: 100px;
+}
+.hit_name {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.hit_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-top: 124px;
+}
+.hit_item {
+    padding: 0 12px;
+    width: 33.333%;
+}
+.hit_image {
+    text-align: center;
+    margin-bottom: 48px;
+}
+.hit_title {
+    font-family: "Freigeist Wide";
+    font-style: normal;
+    font-weight: 550;
+    font-size: 38px;
+    line-height: 120%;
+    color: #FF5E4D;
+    margin-bottom: 48px;
+}
+.hit_text {
+    font-family: "Freigeist Wide";
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+/*hit end*/
+
+
+/*dk*/
+
+.dk {
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 60px 60px 0px 0px;
+    margin-top: -60px;
+    z-index: 8;
+    padding-top: 65px;
+    padding-bottom: 100px;
+}
+
+.dk_title {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.dk_post {
+    margin-top: 72px;
+}
+.dk_post_content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.dk_post_meta {
+    flex: 0 0 50%;
+}
+.dk_post_image {
+    flex: 0 0 50%;
+    text-align: right;
+}
+.dk_post_date {
+    font-family: "Freigeist XWide";
+    font-style: normal;
+    font-weight: 550;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    opacity: 0.3;
+    margin-bottom: 24px;
+}
+.dk_post_excerpt {
+    color: #FFFFFF;
+    font-family: Freigeist;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 48px;
+    line-height: 58px;
+    color: #000000;
+}
+.dk_post_read {
+    position: relative;
+}
+.dk_post_read:after {
+    position: absolute;
+    content: '→';
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dk_post_read a {
+    background: #FFCF00;
+    padding: 16px 40px;
+    width: 100%;
+    color: #000000;
+    display: block;
+}
+
+/*dk end*/
+

@@ -1,0 +1,213 @@
+body.blog {
+    background-color: #FFFFFF;
+    padding-top: 150px;
+}
+body.blog .menu__link {
+    color: #000000;
+}
+body.blog .header-logo img {
+    filter: brightness(0);
+}
+body.blog .header.header_shadow {
+    background: #fff;
+    border-radius: 0px 0px 60px 60px;
+}
+.blog_page {
+    margin-bottom: 160px;
+}
+.blog_title {
+    font-family: 'Freigeist';
+    font-size: 80px;
+    line-height: 94px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 44px 0 60px;
+}
+
+
+
+/*top_post*/
+.top_post {
+    position: relative;
+}
+.top_post_meta {
+    position: absolute;
+    top: 46px;
+    left: 32px;
+    background: #FFFFFF;
+    padding: 32px;
+    border-radius: 35px;
+    max-width: 593px;
+
+}
+.top_post_title {
+    font-family: 'Freigeist';
+    font-size: 48px;
+    line-height: 56px;
+    color: #000000;
+    margin-bottom: 32px;
+}
+.top_post_excerpt {
+    font-family: 'Freigeist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 34px;
+}
+.top_post_datetime {
+    padding-top: 24px;
+    display: flex;
+    position: relative;
+}
+.top_post_datetime:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1px;
+    opacity: 0.22;
+    background: #000000;
+}
+.top_post_date,
+.top_post_read {
+    font-family: 'Freigeist';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+    opacity: 0.3;
+}
+.top_post_read {
+    position: relative;
+}
+.top_post_read:before {
+    position: absolute;
+    content: '-';
+    top: 50%;
+    left: -22px;
+    transform: translate(0, -50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.top_post_date {
+    padding-right: 39px;
+}
+.top_post_more {
+    position: absolute;
+    width: 100%;
+    background: #fecf02;
+    height: 61px;
+    bottom: 0;
+    border-radius: 0 0 35px 35px;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.top_post_more a {
+    font-family: 'Freigeist';
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    position: relative;
+    width: 100%;
+    height: 61px;
+    display: flex;
+    align-items: center;
+}
+.top_post_more a:after {
+    position: absolute;
+    content: '→';
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20px;
+    height: 30px;
+}
+/*top_post end*/
+
+
+
+/*blog_post_list*/
+.blog_post_all {
+    padding-top: 40px;
+}
+.blog_post_all_title {
+    font-family: 'Freigeist';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 48px 0;
+}
+.blog_post_list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+.blog_post_item {
+    padding: 0 12px;
+    flex: 0 0 50%;
+    margin-bottom: 48px;
+}
+.blog_item_img a img {
+    width: 100%;
+    height: 367px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.blog_item_img {
+    margin-bottom: 24px;
+}
+.blog_item_title a h2 {
+    font-family: 'Freigeist';
+    font-size: 32px;
+    line-height: 38px;
+    color: #000000;
+}
+.blog_item_title {
+    margin-bottom: 16px;
+}
+.blog_item_single {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.meta_info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.loadmore-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#true_loadmore {
+    border: 2px solid #FF5E4D;
+    width: 100%;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Freigeist';
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FF5E4D;
+}
+/**/
