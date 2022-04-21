@@ -121,7 +121,13 @@ get_header(); ?>
                     <div class="hunter_block content_width">
                         <div class="hunter_content">
 
-                            <?php if( get_field('hunter_name') ): ?>
+
+
+                            <?php if ( get_field( 'landejer_name_title' ) &&  get_field('landejer_name_link')): ?>
+                                <div class="hunter_name" data-aos="fade-up" data-aos-delay="100">
+                                    <a href="<?php the_field('landejer_name_link'); ?>">» <?php the_field('landejer_name_title'); ?></a>
+                                </div>
+                            <?php else: ?>
                                 <div class="hunter_name" data-aos="fade-up" data-aos-delay="100">
                                     <?php the_field('hunter_name'); ?>
                                 </div>
@@ -178,8 +184,14 @@ get_header(); ?>
                         </div>
                         <?php if( have_rows('landejer_hiw') ): ?>
                             <div class="landejer_hiw">
+                                <div class="sticky_blur"></div>
+                                <?php if( get_field('hunter_hiw_title') ): ?>
+                                   <div class="landejer_hiw_title">
+                                      <?php the_field('landejer_hiw_title'); ?>
+                                   </div>
+                                <?php endif; ?>
                                 <?php while( have_rows('landejer_hiw') ): the_row();  $image = get_sub_field('logo'); ?>
-                                    <div class="landejer_hiw_item">
+                                    <div class="landejer_hiw_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
                                         <div class="landejer_hiw_num"><?php the_sub_field('number'); ?></div>
                                         <div class="landejer_hiw_text_img">
                                             <div class="landejer_hiw_text"><?php the_sub_field('text'); ?></div>
@@ -275,8 +287,14 @@ get_header(); ?>
                         </div>
                         <?php if( have_rows('hunter_hiw') ): ?>
                             <div class="landejer_hiw">
+                                <div class="sticky_blur"></div>
+                                <?php if( get_field('hunter_hiw_title') ): ?>
+                                    <div class="landejer_hiw_title">
+                                        <?php the_field('hunter_hiw_title'); ?>
+                                    </div>
+                                <?php endif; ?>
                                 <?php while( have_rows('hunter_hiw') ): the_row();  $image = get_sub_field('logo'); ?>
-                                    <div class="landejer_hiw_item">
+                                    <div class="landejer_hiw_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
                                         <div class="landejer_hiw_num"><?php the_sub_field('number'); ?></div>
                                         <div class="landejer_hiw_text_img">
                                             <div class="landejer_hiw_text"><?php the_sub_field('text'); ?></div>
@@ -345,18 +363,14 @@ get_header(); ?>
             <div class="manifesto_content">
 
                 <?php if ( get_field( 'field_name' ) ||  get_field('manifesto_title')): ?>
-
                     <div class="manifesto_title" data-aos="fade-up" data-aos-delay="100">
-                        <a href="<?php the_field('manifesto_title_link'); ?>"><?php the_field('manifesto_title'); ?></a>
+                        <a href="<?php the_field('manifesto_title_link'); ?>">» <?php the_field('manifesto_title'); ?></a>
                     </div>
-
                 <?php else: ?>
-
                     <div class="manifesto_title" data-aos="fade-up" data-aos-delay="100">
                         <?php the_field('manifesto_title'); ?>
                     </div>
-
-                <?php endif; // end of if field_name logic ?>
+                <?php endif; ?>
 
                 <div class="manifesto_words" data-aos="fade-up" data-aos-delay="200">
                     <?php if( get_field('line_2') ): ?>

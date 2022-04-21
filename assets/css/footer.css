@@ -288,12 +288,12 @@ footer {
 }
 /*cta end*/
 @media only screen and (max-width: 1440px) {
-
-}
-@media only screen and (max-width: 1180px) {
     .footer_app_logo a img {
         width: 100%;
     }
+}
+@media only screen and (max-width: 1180px) {
+
     .footer_link_item {
         margin-right: 25px;
     }

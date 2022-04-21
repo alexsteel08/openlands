@@ -26,32 +26,32 @@ get_header(); ?>
                         <?php endif; ?>
                         <div class="manifesto_words" data-aos="fade-up" data-aos-delay="200">
                             <?php if( get_field('line_1') ): ?>
-                                <div class="manifesto_line_1">
+                                <div class="manifesto_line_1" style="font-size:3vw;">
                                     <?php the_field('line_1'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_2') ): ?>
-                                <div class="manifesto_line_2">
+                                <div class="manifesto_line_2" style="font-size:8vw;">
                                     <?php the_field('line_2'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_3') ): ?>
-                                <div class="manifesto_line_3">
+                                <div class="manifesto_line_3" style="font-size: 4.9vw;">
                                     <?php the_field('line_3'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_4') ): ?>
-                                <div class="manifesto_line_4">
+                                <div class="manifesto_line_4" style="font-size: 3.9vw;">
                                     <?php the_field('line_4'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_5') ): ?>
-                                <div class="manifesto_line_5">
+                                <div class="manifesto_line_5" style="font-size: 3.7vw;">
                                     <?php the_field('line_5'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_6') ): ?>
-                                <div class="manifesto_line_6">
+                                <div class="manifesto_line_6" style="font-size: 4.5vw;">
                                     <?php the_field('line_6'); ?>
                                 </div>
                             <?php endif; ?>

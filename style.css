@@ -207,6 +207,7 @@ body {
     height: 100%;
     line-height: 1;
     font-size: 1rem;
+    font-size: 100%;
     font-family: 'Inter', sans-serif;
     background-color: #FFFFFF;
     color: #000;
@@ -815,6 +816,22 @@ template {
     border-radius: 100px;
     margin-bottom: 16px;
     width: max-content;
+    font-weight: 600;
+    position: relative;
+    padding-left: 25px;
+}
+.gp_center_item:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 15px;
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: #005459;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
 }
 .gp_center_item:last-child {
     margin-bottom: 0px;
@@ -945,7 +962,7 @@ template {
 .logos,
 .black_logos {
     position: relative;
-    background: #000000;
+    background: #202020;
     border-radius: 60px 60px 0px 0px;
     min-height: 380px;
     margin-top: -105px;
@@ -1117,15 +1134,16 @@ template {
 .manifesto_page {
     padding-bottom: 110px;
 }
-@media only screen and (max-width: 1310px) {
+
+@media only screen and (max-width: 1366px) {
     .manifesto_line_1 {
-        font-size: 40.7312px;
+        font-size: 39.7312px;
     }
     .manifesto_line_2 {
         font-size: 100px;
     }
     .manifesto_line_3 {
-        font-size: 61px;
+        font-size: 59px;
     }
     .manifesto_line_4 {
         font-size: 50.6822px;
@@ -1135,6 +1153,17 @@ template {
     }
     .manifesto_line_6 {
         font-size: 56px;
+    }
+}
+@media only screen and (max-width: 1366px) {
+    .manifesto_line_4 {
+        font-size: 47.6822px;
+    }
+    .manifesto_line_5 {
+        font-size: 43.5359px;
+    }
+    .manifesto_line_6 {
+        font-size: 53px;
     }
 }
 @media only screen and (max-width: 1024px) {
@@ -1180,44 +1209,44 @@ template {
 @media only screen and (max-width: 567px) {
     .manifesto_line_1 {
         text-align: left;
-        text-align-last: left;
+
         line-height: 32px;
         font-size: 20px;
     }
     .manifesto_line_2 {
         text-align: left;
-        text-align-last: left;
+
         line-height: 58px;
         font-size: 50px;
     }
     .manifesto_line_3 {
         text-align: left;
-        text-align-last: left;
+
         line-height: 40px;
         font-size: 32px;
     }
     .manifesto_line_4 {
         text-align: left;
-        text-align-last: left;
+
         line-height: 38px;
         font-size: 25.6822px;
     }
     .manifesto_line_5 {
         text-align: left;
-        text-align-last: left;
+
         line-height: 40px;
     }
     .manifesto_line_6 {
         text-align: left;
-        text-align-last: left;
+
         line-height: 40px;
         font-size: 28px;
     }
     .manifesto_words {
         margin-top: 0px;
     }
-    .manifesto_words div {
-        margin-bottom: 16px;
+    .page-template-page-manifesto .manifesto_words {
+        padding-bottom: 0px;
     }
 }
 /*manifesto end*/
@@ -1487,7 +1516,8 @@ template {
     padding-top: 65px;
     padding-bottom: 100px;
 }
-.hunter_name {
+.hunter_name,
+.hunter_name a {
     font-family: "Freigeist XWide";
     font-style: normal;
     font-weight: 500;
@@ -1495,6 +1525,11 @@ template {
     line-height: 19px;
     text-transform: uppercase;
     color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+.hunter_name a:hover {
+    color: #FFCF00;
+    transition: all 0.3s ease-in-out;
 }
 .hunter_top {
     display: flex;
@@ -1707,7 +1742,7 @@ template {
 /*location*/
 .location {
     position: relative;
-    background: #000000;
+    background: #202020;
     border-radius: 60px 60px 0px 0px;
     margin-top: -60px;
     z-index: 5;
@@ -1851,7 +1886,7 @@ template {
 /*video*/
 .video {
     position: relative;
-    background: #000000;
+    background: #202020;
     border-radius: 60px 60px 0px 0px;
     margin-top: -60px;
     z-index: 6;
@@ -2375,10 +2410,11 @@ template {
 /*content_page end*/
 .sticky_tabs {
     margin-top: -60px;
+    position: relative;
 }
 .sticky {
-    position: sticky;
-    top: 150px;
+    position: absolute;
+    /*top: 150px;*/
     bottom: 0;
     width: 311px;
     height: 87px;
@@ -2390,6 +2426,23 @@ template {
     transform: translate(-50%, 10px);
     box-shadow: 0px 30.4124px 30.4124px 10.1375px rgba(0, 0, 0, 0.15);
     background: #CEDCDD;
+    display: flex;
+    align-items: center;
+}
+.sticky_blur {
+    position: sticky;
+    top: 80px;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    /* border-radius: 50px; */
+    min-height: 2em;
+    background: rgb(206 220 221 / 70%);
+    z-index: 9;
+    filter: blur(13px);
+    left: 50%;
+    transform: translate(0%, 10px);
+    box-shadow: 0px 30.4124px 30.4124px 10.1375px rgb(206 220 221 / 70%);
     display: flex;
     align-items: center;
 }
@@ -2408,6 +2461,24 @@ template {
     line-height: 20px;
     color: #202020;
 }
+.sticky_blur.active {
+    position: sticky;
+    top: 80px;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    /* border-radius: 50px; */
+    min-height: 2em;
+    background: rgb(221 229 223 / 70%);
+    z-index: 9;
+    filter: blur(13px);
+    left: 50%;
+    transform: translate(0%, 10px);
+    box-shadow: 0px 30.4124px 30.4124px 10.1375px rgb(221 229 223 / 70%);
+    display: flex;
+    align-items: center;
+}
+
 .active { color: red; }
 .tab_item { display: none; }
 .tab_item:first-child { display: block; }
@@ -2437,6 +2508,9 @@ template {
     max-width: 861px;
     margin: 0 auto;
     padding: 0 1rem;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    position: relative;
 }
 .landejer_hiw_num {
     font-family: 'Freigeist';
@@ -2478,7 +2552,7 @@ template {
 }
 .sticky_tabs_padtop {
     background: #DEE5E0;
-    height: 200px;
+    height: 100px;
     width: 100%;
     position: relative;
     z-index: 2;
@@ -2491,10 +2565,23 @@ template {
 .sticky_tabs_padtop.active {
     background: #CEDCDD;
 }
+.landejer_hiw_title {
+    font-family: 'Freigeist';
+    font-style: normal;
+    font-weight: 550;
+    font-size: 48px;
+    line-height: 58px;
+    color: #005459;
+    padding: 30px 0;
+    text-align: center;
+}
 @media only screen and (max-width: 576px) {
     .sticky {
         left: 50%;
-        transform: translate(-15%, -70px);
+        transform: translate(-50%, -70px);
+    }
+    .sticky_blur {
+        top: 40px;
     }
     .landejer_hiw_text_img {
         padding-left: 0px;
@@ -2523,5 +2610,6 @@ template {
 .fwi img {
     width: 100%;
     object-fit: contain;
+    border-radius: 60px 60px 0px 0px;
 }
 /*fwi end*/
