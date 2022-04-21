@@ -34,7 +34,7 @@ get_header(); ?>
 
                             // Setup this post for WP functions (variable must be named $post).
                             setup_postdata($post); ?>
-                            <div class="top_post">
+                            <div class="top_post" data-aos="fade-up" data-aos-delay="200">
                                 <div class="top_post_img">
                                     <img src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                                 </div>
@@ -65,8 +65,8 @@ get_header(); ?>
                     wp_reset_postdata(); ?>
                 <?php endif; ?>
                 <div class="blog_post_all content_width">
-                    <div class="blog_post_all_title">Latest posts</div>
-                    <div class="blog_post_list">
+                    <div class="blog_post_all_title" data-aos="fade-up" data-aos-delay="100">Latest posts</div>
+                    <div class="blog_post_list" data-aos="fade-up" data-aos-delay="200">
                         <?php
                         $new_loop = new WP_Query(array(
                             'post_type' => 'post',
@@ -97,8 +97,6 @@ get_header(); ?>
                         <!-- Button -->
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>

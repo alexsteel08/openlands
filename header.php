@@ -9,7 +9,7 @@
 <?php wp_body_open();?>
 <div class="wr">
     <header id="site-header" class="header">
-        <div class="content_width">
+        <div class="header__container">
 
             <div id="menu" class="header__menu menu">
                 <?php if( get_field('logo','option') ): ?>
@@ -49,12 +49,17 @@
 
                     ?>
                     <?php if( get_field('cta_button_text','option') && get_field('cta_button_link','option') ): ?>
-                        <div class="cta_button_header" data-da="mega-menu,130,992">
+                        <div class="cta_button_header" data-da="nav-links,130,992">
                             <a href="<?php the_field('cta_button_link','option'); ?>">
                                 <?php the_field('cta_button_text','option'); ?>
                             </a>
                         </div>
                     <?php endif; ?>
+
+
+                    <div class="header_lang" data-da="nav-links,131,992">
+                        <?php echo do_shortcode('[wpml_language_selector_widget]'); ?>
+                    </div>
                 </nav>
 
 

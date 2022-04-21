@@ -72,7 +72,57 @@ jQuery(document).ready(function($){
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
+                }
+            }
+        ]
+
+    });
+});
+
+jQuery(document).ready(function($){
+    $('.logos').slick({
+                // lazyLoad: 'ondemand',
+        slidesToShow:5,
+        slidesToScroll: 1,
+        arrows: false,
+        adaptiveHeight: false,
+        touchThreshold: 10,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 500,
+        dots:false,
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 5,
+                }
+            },
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 4,
+
+                }
+            },
+
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
                 }
             }
         ]
@@ -123,7 +173,7 @@ jQuery(document).ready(function($){
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                 }
             }
         ]
@@ -138,8 +188,8 @@ jQuery(document).ready(function($){
         arrows: true,
         adaptiveHeight: false,
         touchThreshold: 10,
-        autoplay: true,
-        autoplaySpeed: 4000,
+        // autoplay: true,
+        // autoplaySpeed: 4000,
         speed: 500,
         dots:false,
 
@@ -425,37 +475,56 @@ AOS.init({
 
 
 
-        jQuery(document).ready(function($){
-            $(document).ready(function() {
-                $('select').niceSelect();
-            });
+jQuery(document).ready(function($){
+    $(document).ready(function() {
+        $('select').niceSelect();
+    });
+});
+
+
+jQuery(document).ready(function($){
+    $(document).ready(function() {
+        $(".wrapper .tab").click(function() {
+            $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+            $(".sticky_tabs_padtop").removeClass("active").eq($(this).index()).addClass("active");
+            $(".sticky_tabs_padding").removeClass("active").eq($(this).index()).addClass("active");
+            $(".tab_item").hide().eq($(this).index()).fadeIn({
+                duration: 0
+            })
+        }).eq(0).addClass("active");
+    });
+});
+
+
+
+
+
+jQuery(document).ready(function($){
+    $(document).ready(function() {
+        $('#leftside').hover(function(){
+                $('.gp_left_image_hover').addClass('active_left');
+                $('.gp_left_list').addClass('active_left');
+                $('.gp_left').addClass('active_left');
+            },
+            function(){
+                $('.gp_left_image_hover').removeClass('active_left');
+                $('.gp_left_list').removeClass('active_left');
+                $('.gp_left').removeClass('active_left');
         });
+        $('#rightside').hover(function(){
+                $('.gp_right_image_hover').addClass('active_right');
+                $('.gp_right_list').addClass('active_right');
+                $('.gp_left_image_hover').removeClass('active_left');
+                $('.gp_left_list').removeClass('active_left');
+                $('.gp_left').removeClass('active_left');
+            },
+            function(){
+                $('.gp_right_image_hover').removeClass('active_right');
+                $('.gp_right_list').removeClass('active_right');
+                $('.gp_left_image_hover').addClass('active_left');
+                $('.gp_left_list').addClass('active_left');
+                $('.gp_left').addClass('active_left');
+        });
+    });
+});
 
-
-
-
-
-// jQuery(document).ready(function($){
-//     $(function () {
-//         var parallaxElements = $('.parallax'),
-//             parallaxQuantity = parallaxElements.length;
-//
-//         $(window).on('scroll', function () {
-//
-//             window.requestAnimationFrame(function () {
-//
-//                 for (var i = 0; i < parallaxQuantity; i++) {
-//                     var currentElement =  parallaxElements.eq(i);
-//                     var scrolled = $(window).scrollTop();
-//
-//                     currentElement.css({
-//                         'transform': 'translate3d(0,' + scrolled * -0.3 + 'px, 0)'
-//                     });
-//
-//                 }
-//             });
-//
-//         });
-//     })();
-// });
-//

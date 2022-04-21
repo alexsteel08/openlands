@@ -11,7 +11,7 @@ get_header(); ?>
         <div class="team_content">
             <?php if( get_field('backround_image') ||  get_field('title')): ?>
                <div class="team_baner" style="background-image: url( <?php the_field('backround_image'); ?>)">
-                   <div class="team_title">
+                   <div class="team_title" data-aos="fade-up" data-aos-delay="100">
                        <?php the_field('title'); ?>
                    </div>
                </div>
@@ -19,7 +19,7 @@ get_header(); ?>
 
 
             <?php if( get_field('text') ): ?>
-                <div class="team_text_block">
+                <div class="team_text_block" data-aos="fade-up" data-aos-delay="100">
                     <div class="team_text content_width">
                         <?php the_field('text'); ?>
                     </div>
@@ -31,10 +31,10 @@ get_header(); ?>
                    <div class="mission_block content_width">
                        <div class="mission_content">
                            <div class="mission_text">
-                               <div class="our_mission_title"><?php the_field('our_mission'); ?></div>
-                               <div class="our_mission_text"><?php the_field('our_mission_text'); ?></div>
+                               <div class="our_mission_title" data-aos="fade-up" data-aos-delay="100"><?php the_field('our_mission'); ?></div>
+                               <div class="our_mission_text" data-aos="fade-up" data-aos-delay="200"><?php the_field('our_mission_text'); ?></div>
                            </div>
-                           <div class="mission_img">
+                           <div class="mission_img" data-aos="fade-left" data-aos-delay="300">
                                <img src="<?php the_field('image'); ?>" alt="logo">
                            </div>
                        </div>
