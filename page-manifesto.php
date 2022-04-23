@@ -5,17 +5,15 @@ Template Name: Openlands manifesto
 */
 
 get_header(); ?>
-
 <section class="team">
     <div class="team_block ">
         <div class="team_content">
-            <?php if( get_field('backround_image') ||  get_field('title')): ?>
-               <div class="team_baner" style="background-image: url( <?php the_field('backround_image'); ?>)">
-                   <div class="team_title" data-aos="fade-up" data-aos-delay="100">
-                       <?php the_field('title'); ?>
-                   </div>
-               </div>
-            <?php endif; ?>
+            <div class="bg-video-wrap" style="background: url(<?php if( get_field('backround_image') ): ?><?php the_field('backround_image'); ?><?php endif; ?>) no-repeat center center/cover;">
+                <video src="<?php $file = get_field('backround_video'); if( $file ): ?><?php echo $file['url']; ?> <?php endif; ?>" loop muted autoplay>
+                </video>
+                <div class="overlay"></div>
+                <h1 class="team_title"><?php the_field('title'); ?></h1>
+            </div>
             <section class="manifesto manifesto_page">
                 <div class="manifesto_block content_width">
                     <div class="manifesto_content">
@@ -26,32 +24,32 @@ get_header(); ?>
                         <?php endif; ?>
                         <div class="manifesto_words" data-aos="fade-up" data-aos-delay="200">
                             <?php if( get_field('line_1') ): ?>
-                                <div class="manifesto_line_1" style="font-size:3vw;">
+                                <div class="manifesto_line_1 scale--js">
                                     <?php the_field('line_1'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_2') ): ?>
-                                <div class="manifesto_line_2" style="font-size:8vw;">
+                                <div class="manifesto_line_2 scale--js">
                                     <?php the_field('line_2'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_3') ): ?>
-                                <div class="manifesto_line_3" style="font-size: 4.9vw;">
+                                <div class="manifesto_line_3 scale--js">
                                     <?php the_field('line_3'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_4') ): ?>
-                                <div class="manifesto_line_4" style="font-size: 3.9vw;">
+                                <div class="manifesto_line_4 scale--js">
                                     <?php the_field('line_4'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_5') ): ?>
-                                <div class="manifesto_line_5" style="font-size: 3.7vw;">
+                                <div class="manifesto_line_5 scale--js">
                                     <?php the_field('line_5'); ?>
                                 </div>
                             <?php endif; ?>
                             <?php if( get_field('line_6') ): ?>
-                                <div class="manifesto_line_6" style="font-size: 4.5vw;">
+                                <div class="manifesto_line_6 scale--js">
                                     <?php the_field('line_6'); ?>
                                 </div>
                             <?php endif; ?>

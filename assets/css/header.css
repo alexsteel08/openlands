@@ -199,7 +199,14 @@ nav{
     text-decoration: none;
     color: #ffffff;
 }
+.current_page_item > .menu__link {
+    color: #FFCF00;
+}
 
+.current_page_item > .menu__link:before {
+    width: 100%;
+    color: #FFCF00;
+}
 @media only screen and (max-width: 1100px) {
     .menu__link {
         margin: 0 14px;

@@ -41,6 +41,7 @@ jQuery(document).ready(function ($) {
     });
 });
 
+
 jQuery(document).ready(function ($) {
     $('.black_logos_slider').slick({
         // lazyLoad: 'ondemand',
@@ -454,6 +455,19 @@ jQuery(document).ready(function ($) {
     })
 });
 
+jQuery(document).ready(function ($) {
+    $(function () {
+        var current = location.pathname;
+        $('.nav-links li').each(function () {
+            var $this = $(this);
+            // if the current path is like this link, make it active
+            if ($this.attr('href').indexOf(current) !== -1) {
+                $this.addClass('current');
+            }
+        })
+    })
+});
+
 
 jQuery(document).ready(function ($) {
 
@@ -540,7 +554,6 @@ jQuery(document).ready(function ($) {
             });
     });
 });
-
 
 
 
