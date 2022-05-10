@@ -512,25 +512,25 @@ template {
 
 /*baner*/
 .baner {
-    min-height: 1300px;
+    min-height: 1075px;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 330px;
+    padding-top: 230px;
 }
 .baner_title {
     font-family: 'Freigeist XWide';
     font-weight: 500;
-    font-size: 80px;
+    font-size: 75px;
     line-height: 94px;
     text-align: center;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     text-align: center;
     color: #FFCF00;
-    margin-bottom: 140px;
+    margin-bottom: 60px;
 }
 .baner_descr {
-    max-width: 580px;
+    max-width: 600px;
     margin: 0 auto;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -547,7 +547,7 @@ template {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 70px;
     position: relative;
 }
 .wpcf7-spinner {
@@ -680,7 +680,13 @@ template {
 }
 @media only screen and (max-width: 1366px) {
     .baner_title {
-        letter-spacing: 0.4em;
+        letter-spacing: 0.1em;
+        font-size: 65px;
+    }
+}
+@media only screen and (max-width: 1180px) {
+    .baner_form {
+        display: none;
     }
 }
 @media only screen and (max-width: 1100px) {
@@ -738,7 +744,7 @@ template {
     margin-top: -60px;
     padding: 170px 0 300px;
     background: #2F4231;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 .green_phone_content {
     display: flex;
@@ -750,6 +756,7 @@ template {
     text-align: center;
     opacity: 0.5;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 .gp_left:hover,
 .gp_right:hover {
@@ -862,6 +869,9 @@ template {
 .gp_left a img {
     width: 100%;
 }
+.gp_right.active_right {
+    opacity: 1;
+}
 .active_left.active_left {
     opacity: 1;
 }
@@ -956,17 +966,17 @@ template {
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
-    color: rgb(255 255 255 / 50%);
+    color: rgb(32 32 32 / 50%);
     opacity: 0.5;
 }
 .logos,
 .black_logos {
     position: relative;
-    background: #202020;
-    border-radius: 60px 60px 0px 0px;
+    background: #EEEEEE;
+    border-radius: 0px 0px 0px 0px;
     min-height: 380px;
-    margin-top: -105px;
-    z-index: 3;
+    /*margin-top: -105px;*/
+    /*z-index: 3;*/
     padding-top: 65px;
 }
 .logos,
@@ -982,7 +992,7 @@ template {
 }
 .black_logo {
     width: 100%;
-    background-position: center left;
+    background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 70px;
@@ -1012,9 +1022,8 @@ template {
 .partnerships_logos {
     position: relative;
     background: #005459;
-    border-radius: 60px 60px 0px 0px;
-    min-height: 380px;
-    margin-top: -60px;
+    border-radius: 0px 0px 0px 0px;
+    min-height: 350px;
     z-index: 3;
     padding-top: 65px;
 }
@@ -1024,7 +1033,7 @@ template {
 .partnerships_logo img,
 .partnerships_logo {
     width: 100%;
-    background-position: center left;
+    background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 70px;
@@ -1044,7 +1053,7 @@ template {
 .manifesto {
     position: relative;
     background: #78174D;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     margin-top: -60px;
     z-index: 3;
     padding-top: 65px;
@@ -1083,7 +1092,7 @@ template {
 .manifesto_line_2 {
     font-family: 'Freigeist Con';
     font-weight: 400;
-    font-size: 117px;
+    font-size: 72px;
     line-height: 100%;
     color: #ED6956;
     text-transform: uppercase;
@@ -1114,7 +1123,7 @@ template {
 .manifesto_line_5 {
     font-family: 'Freigeist Con';
     font-weight: 300;
-    font-size: 51.54px;
+    font-size: 37.54px;
     line-height: 87px;
     color: #ED6956;
     text-transform: uppercase;
@@ -1135,13 +1144,54 @@ template {
 .manifesto_page {
     padding-bottom: 110px;
 }
-
+.manifesto_text,
+.manifesto_text p,
+.manifesto_text p span,
+.manifesto_text p span b {
+    color: #ED6956 !important;
+    font-size: 1.2rem;
+    font-family: Freigeist;
+}
+.manifesto_text p {
+    padding: 10px 0;
+}
+.manifesto_text p span {
+    line-height: 150%;
+}
+.manifesto_text p span b {
+    font-size: 1.2rem;
+}
+.manifesto_text ul li {
+    position: relative;
+    line-height: 150%;
+    list-style: disc;
+    list-style-position: inside;
+}
+.manifesto_text ul li::marker {
+    color: #ED6956;
+}
+/*.manifesto_text ul li:after {*/
+/*    position: absolute;*/
+/*    content: '';*/
+/*    top: 50%;*/
+/*    left: 0;*/
+/*    !*transform: translate(0, -50%);*!*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*    width: 5px;*/
+/*    height: 5px;*/
+/*    border-radius: 10px;*/
+/*    background: #ED6956;*/
+/*}*/
+.page-template-front-page .manifesto_line_2 {
+    font-size: 60px;
+}
 @media only screen and (max-width: 1366px) {
     /*.manifesto_line_1 {*/
     /*    font-size: 39.7312px;*/
     /*}*/
     .manifesto_line_2 {
-        font-size: 100px;
+        font-size: 65px;
     }
     .manifesto_line_3 {
         font-size: 59px;
@@ -1167,12 +1217,17 @@ template {
         font-size: 53px;
     }
 }
+@media only screen and (max-width: 1140px) {
+    .manifesto_line_2 {
+        font-size: 60px;
+    }
+}
 @media only screen and (max-width: 1024px) {
     /*.manifesto_line_1 {*/
     /*    font-size: 30px;*/
     /*}*/
     .manifesto_line_2 {
-        font-size: 75px;
+        font-size: 52px;
     }
     .manifesto_line_3 {
         font-size: 46px;
@@ -1258,11 +1313,11 @@ template {
 .landejer {
     position: relative;
     background: #DEE5E0;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     margin-top: -90px;
     z-index: 4;
     padding-top: 65px;
-    padding-bottom: 100px;
+    /*padding-bottom: 100px;*/
 }
 .landejer_name {
     font-family: "Freigeist XWide";
@@ -1282,7 +1337,7 @@ template {
     font-family: "Freigeist XWide";
     font-style: normal;
     font-weight: normal;
-    font-size: 80px;
+    font-size: 65px;
     line-height: 96px;
     color: #005459;
     max-width: 620px;
@@ -1511,11 +1566,11 @@ template {
 .hunter {
     position: relative;
     background: #CEDCDD;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     margin-top: -90px;
     z-index: 2;
     padding-top: 65px;
-    padding-bottom: 100px;
+    /*padding-bottom: 100px;*/
 }
 .hunter_name,
 .hunter_name a {
@@ -1535,7 +1590,7 @@ template {
 .hunter_top {
     display: flex;
     justify-content: space-between;
-    padding: 88px 0 110px;
+    padding: 30px 0 110px;
 }
 .hunter_title {
     font-family: "Freigeist XWide";
@@ -1549,7 +1604,20 @@ template {
 .hunter_title span {
     font-weight: bold;
 }
-
+.hunter_block {
+    position: relative;
+}
+.hunter_content_wrapper {
+    z-index: 11;
+    position: relative;
+    padding-bottom: 50px;
+}
+.landejer_content_wrapper {
+    z-index: 11;
+    position: relative;
+    padding-bottom: 50px;
+    background: #DEE5E0;
+}
 
 .hunter_wrapper {
     display: flex;
@@ -1569,7 +1637,7 @@ template {
     font-style: normal;
     font-size: 40px;
     line-height: 65px;
-    color: #000000;
+    color: #005459;
     position: relative;
     padding: 0 0 0 59px;
     margin-bottom: 64px;
@@ -1744,8 +1812,8 @@ template {
 .location {
     position: relative;
     background: #202020;
-    border-radius: 60px 60px 0px 0px;
-    margin-top: -60px;
+    border-radius: 0px 0px 0px 0px;
+    /*margin-top: -60px;*/
     z-index: 5;
     padding-top: 65px;
     padding-bottom: 200px;
@@ -1888,7 +1956,7 @@ template {
 .video {
     position: relative;
     background: #202020;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     margin-top: -60px;
     z-index: 6;
     padding-top: 65px;
@@ -1913,7 +1981,7 @@ template {
 .video_item {
     width: 100%;
     height: auto;
-    object-fit: fill;
+
 }
 .playpause {
     background-image:url(/wp-content/uploads/2022/03/play.svg);
@@ -1929,6 +1997,11 @@ template {
     width: 100px;
     height: 100px;
 }
+@media only screen and (max-width: 1180px) {
+    .video_item {
+        object-fit: contain;
+    }
+}
 @media only screen and (max-width: 576px) {
     .video_title {
         font-size: 24px;
@@ -1943,7 +2016,7 @@ template {
 .hit {
     position: relative;
     background: #78174D;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     margin-top: -60px;
     z-index: 7;
     padding-top: 65px;
@@ -2021,7 +2094,7 @@ template {
 .dk {
     position: relative;
     background: #FFFFFF;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     margin-top: -60px;
     z-index: 8;
     padding-top: 65px;
@@ -2154,7 +2227,7 @@ template {
     position: relative;
     background-color: #FFFFFF;
     z-index: 13;
-    border-radius: 35px 35px 0 0;
+    border-radius: 0px 0px 0 0;
     margin-top: -60px;
     padding-top: 65px;
     padding-bottom: 130px;
@@ -2181,7 +2254,7 @@ template {
 
 .mission {
     background: #E0E6E0;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     position: relative;
     z-index: 14;
     margin-top: -60px;
@@ -2269,7 +2342,7 @@ template {
 /*gallery*/
 .gallery {
     background: #2E3B20;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     position: relative;
     z-index: 14;
     margin-top: -60px;
@@ -2316,7 +2389,7 @@ template {
 /*burgundy*/
 .burgundy {
     background: #78174D;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     position: relative;
     z-index: 14;
     margin-top: -60px;
@@ -2409,14 +2482,30 @@ template {
     line-height: 140%;
 }
 /*content_page end*/
+
+.hunter_color {
+    background: #cedcdd !important;
+}
+.landejer_color  {
+    background: #DEE5E0 !important;
+}
+.hunter_hiw_wrapper {
+    background: #DEE5E0;
+}
+.landejer_hiw_wrapper {
+    background: #CEDCDD;
+}
+
 .sticky_tabs {
     margin-top: -60px;
     position: relative;
+    z-index: 3;
+    border-radius: 60px 60px 0 0;
 }
 .sticky {
     position: sticky;
     bottom: 30px;
-    margin-top: 20px;
+    margin-top: 60px;
     width: 311px;
     height: 87px;
     border-radius: 50px;
@@ -2432,18 +2521,37 @@ template {
 }
 .sticky_blur {
     position: sticky;
-    top: 80px;
+    top: 60px;
     bottom: 0;
     width: 100%;
     height: 200px;
+    margin-bottom: -170px;
     /* border-radius: 50px; */
     min-height: 2em;
-    background: rgb(206 220 221 / 70%);
+    background: rgb(221 229 223 / 90%);
     z-index: 9;
     filter: blur(13px);
     left: 50%;
-    transform: translate(0%, 10px);
-    box-shadow: 0px 30.4124px 30.4124px 10.1375px rgb(206 220 221 / 70%);
+    transform: translate(-1%, 20px);
+    /*box-shadow: 0px 30.4124px 30.4124px 10.1375px rgb(221 229 223 / 90%);*/
+    background: linear-gradient(180deg, rgba(221,229,223,1) 50%, rgba(255,255,255,0) 100%);
+    display: flex;
+    align-items: center;
+}
+.sticky_blur_down {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    margin-top: -170px;
+    min-height: 2em;
+    background: rgb(221 229 223 / 90%);
+    z-index: 9;
+    filter: blur(13px);
+    left: 50%;
+    transform: translate(-1%, 20px);
+    /*box-shadow: 0px 30.4124px 30.4124px 10.1375px rgb(221 229 223 / 90%);*/
+    background: linear-gradient(0deg, rgba(221,229,223,1) 50%, rgba(255,255,255,0) 100%);
     display: flex;
     align-items: center;
 }
@@ -2463,21 +2571,12 @@ template {
     color: #202020;
 }
 .sticky_blur.active {
-    position: sticky;
-    top: 80px;
-    bottom: 0;
-    width: 100%;
-    height: 200px;
-    /* border-radius: 50px; */
-    min-height: 2em;
-    background: rgb(221 229 223 / 70%);
-    z-index: 9;
-    filter: blur(13px);
-    left: 50%;
-    transform: translate(0%, 10px);
-    box-shadow: 0px 30.4124px 30.4124px 10.1375px rgb(221 229 223 / 70%);
-    display: flex;
-    align-items: center;
+    background: linear-gradient(180deg, rgba(206,220,221,1) 50%, rgba(255,255,255,0) 100%);
+}
+.sticky_blur_down.active {
+    /*background: rgb(206 220 221 / 90%);*/
+    box-shadow: 0px 30.4124px 30.4124px 10.1375px rgb(206,220,221 / 90%);
+    background: linear-gradient(0deg, rgba(206,220,221,1) 50%, rgba(255,255,255,0) 100%);
 }
 
 .active { color: red; }
@@ -2509,10 +2608,11 @@ template {
     max-width: 861px;
     margin: 0 auto;
     padding: 0 1rem;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    /*margin-bottom: 100px;*/
+    /*margin-top: 50px;*/
     position: relative;
 }
+
 .landejer_hiw_num {
     font-family: 'Freigeist';
     font-style: normal;
@@ -2543,28 +2643,28 @@ template {
     margin-bottom: 0px;
 }
 .sticky_tabs_block {
-
+    background: #dde5df;
 }
 .sticky_tabs_padding {
-    background: #DEE5E0;
-    height: 200px;
+    background: #dde5df;
+    height: 40px;
     width: 100%;
     text-align: center;
 }
 .sticky_tabs_padtop {
-    background: #DEE5E0;
+    background: #dde5df;
     height: 100px;
     width: 100%;
     position: relative;
     z-index: 2;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     margin-top: -90px;
 }
 .sticky_tabs_padding.active {
-    background: #CEDCDD;
+    background: #dde5df;
 }
 .sticky_tabs_padtop.active {
-    background: #CEDCDD;
+    background: #cedcdd;
 }
 .landejer_hiw_title {
     font-family: 'Freigeist';
@@ -2573,16 +2673,19 @@ template {
     font-size: 48px;
     line-height: 58px;
     color: #005459;
-    padding: 30px 0;
+    padding: 80px 1rem 32px;
     text-align: center;
+    position: relative;
+    z-index: 10;
 }
 @media only screen and (max-width: 576px) {
     .sticky {
         left: 50%;
-        transform: translate(-50%, -70px);
+        transform: translate(-15%, 0px);
+        margin-top: 70px;
     }
     .sticky_blur {
-        top: 40px;
+        top: 0px;
     }
     .landejer_hiw_text_img {
         padding-left: 0px;
@@ -2598,7 +2701,16 @@ template {
         width: 60px;
     }
 }
-
+@media only screen and (max-width: 414px) {
+    .sticky {
+        transform: translate(-15%, 0px);
+    }
+}
+@media only screen and (max-width: 375px) {
+    .sticky {
+        transform: translate(-10%, 0px);
+    }
+}
 
 
 /*fwi*/
@@ -2611,7 +2723,7 @@ template {
 .fwi img {
     width: 100%;
     object-fit: contain;
-    border-radius: 60px 60px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
 }
 /*fwi end*/
 
@@ -2648,5 +2760,15 @@ video {
     background: rgb(0 0 0 / 60%);
     background-size: 3px 3px;
     z-index: 2;
+}
+@media only screen and (max-width: 1180px) {
+    video {
+        min-height: auto;
+    }
+}
+@media only screen and (max-width: 576px) {
+    video {
+        min-height: auto;
+    }
 }
 /**/

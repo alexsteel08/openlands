@@ -51,8 +51,8 @@ get_header(); ?>
 
                 <?php if( get_field('gp_left_image') && get_field('gp_left_title') && get_field('gp_left_link') ): ?>
                     <div class="green_phone_left" data-da="green_phone_block,2,768">
-                           <div class="gp_left active_left">
-                               <a id="leftside" href="<?php the_field('gp_left_link'); ?>">
+                           <div id="leftside" class="gp_left active_left">
+                               <a  >
                                    <img src="<?php the_field('gp_left_image'); ?>" alt="img">
                                    <span><?php the_field('gp_left_title'); ?></span>
                                </a>
@@ -100,8 +100,8 @@ get_header(); ?>
 
                 <?php if( get_field('gp_right_image') && get_field('gp_right_title') && get_field('gp_right_link')): ?>
                     <div class="green_phone_right"  data-da="green_phone_block,3,768" data-aos="fade-up" data-aos-delay="100">
-                        <div class="gp_right">
-                            <a id="rightside" href="<?php the_field('gp_right_link'); ?>">
+                        <div id="rightside" class="gp_right">
+                            <a >
                                 <img src="<?php the_field('gp_right_image'); ?>" alt="img">
                                 <span><?php the_field('gp_right_title'); ?></span>
                             </a>
@@ -112,211 +112,222 @@ get_header(); ?>
             </div>
         </div>
     </section>
-    <div class="sticky_tabs_padtop active"></div>
+<!--    <div class="sticky_tabs_padtop active"></div>-->
     <div class="sticky_tabs_block">
         <section class="sticky_tabs wrapper">
 
             <div class="tab_content">
                 <div class="tab_item hunter">
-                    <div class="hunter_block content_width">
-                        <div class="hunter_content">
-
-
-
-                            <?php if ( get_field( 'landejer_name_title' ) &&  get_field('landejer_name_link')): ?>
-                                <div class="hunter_name" data-aos="fade-up" data-aos-delay="100">
-                                    <a href="<?php the_field('landejer_name_link'); ?>">» <?php the_field('landejer_name_title'); ?></a>
-                                </div>
-                            <?php else: ?>
-                                <div class="hunter_name" data-aos="fade-up" data-aos-delay="100">
-                                    <?php the_field('hunter_name'); ?>
-                                </div>
-                            <?php endif; ?>
-
-                            <div class="hunter_top" data-aos="fade-up" data-aos-delay="200">
-                                <?php if( get_field('hunter_title') ): ?>
-                                    <div class="hunter_title">
-                                        <?php the_field('hunter_title'); ?>
+                    <div class="hunter_block">
+                        <div class="hunter_content_wrapper hunter_color">
+                            <div class="hunter_content content_width">
+                                <?php if ( get_field( 'landejer_name_title' ) &&  get_field('landejer_name_link')): ?>
+                                    <div class="hunter_name" data-aos="fade-up" data-aos-delay="100">
+                                        <a href="<?php the_field('landejer_name_link'); ?>">» <?php the_field('landejer_name_title'); ?></a>
                                     </div>
-                                <?php endif; ?>
-                                <?php if( get_field('hunter_image') ): ?>
-                                    <div class="hunter_image">
-                                        <img src="<?php the_field('hunter_image'); ?>" alt="img">
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-
-                            <div class="hunter_wrapper">
-                                <?php if( have_rows('hunter_list') ): ?>
-                                    <div class="hunter_list">
-                                        <?php while( have_rows('hunter_list') ): the_row(); ?>
-                                            <div class="hunter_list_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
-                                                <?php the_sub_field('text'); ?>
-                                            </div>
-                                        <?php endwhile; ?>
+                                <?php else: ?>
+                                    <div class="hunter_name" data-aos="fade-up" data-aos-delay="100">
+                                        <?php the_field('hunter_name'); ?>
                                     </div>
                                 <?php endif; ?>
 
-                                <div class="hunter_app">
-                                    <div class="hunter_pay">
-                                        <?php if( get_field('hunter_pay_img') ): ?>
-                                            <div class="hunter_pay_img">
-                                                <img data-aos="fade-up" data-aos-delay="100" src="<?php the_field('hunter_pay_img'); ?>" alt="img">
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php if( have_rows('hunter_pay_list') ): ?>
-                                            <div class="hunter_pay_list">
-                                                <?php while( have_rows('hunter_pay_list') ): the_row();?>
-                                                    <div class="hunter_pay_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
-                                                        <?php the_sub_field('text'); ?>
-                                                    </div>
-                                                <?php endwhile; ?>
-                                            </div>
-                                        <?php endif; ?>
-                                    </div>
-                                    <?php if( get_field('hunter_screan') ): ?>
-                                        <div class="hunter_screan">
-                                            <img data-aos="fade-up" data-aos-delay="100" src="<?php the_field('hunter_screan'); ?>" alt="img">
+                                <div class="hunter_top" data-aos="fade-up" data-aos-delay="200">
+                                    <?php if( get_field('hunter_title') ): ?>
+                                        <div class="hunter_title">
+                                            <?php the_field('hunter_title'); ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <?php if( get_field('hunter_image') ): ?>
+                                        <div class="hunter_image">
+                                            <img src="<?php the_field('hunter_image'); ?>" alt="img">
                                         </div>
                                     <?php endif; ?>
                                 </div>
+
+                                <div class="hunter_wrapper">
+                                    <?php if( have_rows('hunter_list') ): ?>
+                                        <div class="hunter_list">
+                                            <?php while( have_rows('hunter_list') ): the_row(); ?>
+                                                <div class="hunter_list_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
+                                                    <?php the_sub_field('text'); ?>
+                                                </div>
+                                            <?php endwhile; ?>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <div class="hunter_app">
+                                        <div class="hunter_pay">
+                                            <?php if( get_field('hunter_pay_img') ): ?>
+                                                <div class="hunter_pay_img">
+                                                    <img data-aos="fade-up" data-aos-delay="100" src="<?php the_field('hunter_pay_img'); ?>" alt="img">
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if( have_rows('hunter_pay_list') ): ?>
+                                                <div class="hunter_pay_list">
+                                                    <?php while( have_rows('hunter_pay_list') ): the_row();?>
+                                                        <div class="hunter_pay_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
+                                                            <?php the_sub_field('text'); ?>
+                                                        </div>
+                                                    <?php endwhile; ?>
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
+                                        <?php if( get_field('hunter_screan') ): ?>
+                                            <div class="hunter_screan">
+                                                <img data-aos="fade-up" data-aos-delay="100" src="<?php the_field('hunter_screan'); ?>" alt="img">
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <?php if( have_rows('landejer_hiw') ): ?>
-                            <div class="landejer_hiw">
-                                <div class="sticky_blur"></div>
+                            <div class="hunter_hiw_wrapper">
+<!--                                <div class="sticky_blur"></div>-->
                                 <?php if( get_field('hunter_hiw_title') ): ?>
-                                   <div class="landejer_hiw_title">
-                                      <?php the_field('landejer_hiw_title'); ?>
-                                   </div>
-                                <?php endif; ?>
-                                <?php while( have_rows('landejer_hiw') ): the_row();  $image = get_sub_field('logo'); ?>
-                                    <div class="landejer_hiw_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
-                                        <div class="landejer_hiw_num"><?php the_sub_field('number'); ?></div>
-                                        <div class="landejer_hiw_text_img">
-                                            <div class="landejer_hiw_text"><?php the_sub_field('text'); ?></div>
-                                            <div class="landejer_hiw_img"><img src="<?php echo $image; ?>" alt="logo"></div>
-                                        </div>
+                                    <div class="landejer_hiw_title">
+                                        <?php the_field('landejer_hiw_title'); ?>
                                     </div>
-                                <?php endwhile; ?>
+                                <?php endif; ?>
+
+                                <div class="landejer_hiw">
+                                    <?php while( have_rows('landejer_hiw') ): the_row();  $image = get_sub_field('logo'); ?>
+                                        <div class="landejer_hiw_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>50">
+                                            <div class="landejer_hiw_num"><?php the_sub_field('number'); ?></div>
+                                            <div class="landejer_hiw_text_img">
+                                                <div class="landejer_hiw_text"><?php the_sub_field('text'); ?></div>
+                                                <div class="landejer_hiw_img"><img src="<?php echo $image; ?>" alt="logo"></div>
+                                            </div>
+                                        </div>
+                                    <?php endwhile; ?>
+
+                                </div>
+<!--                                <div class="sticky_blur_down"></div>-->
                             </div>
                         <?php endif; ?>
 
                     </div>
                 </div>
                 <div class="tab_item landejer">
-                    <div class="landejer_block content_width">
-                        <div class="landejer_content">
-                            <?php if( get_field('landejer_name') ): ?>
-                                <div class="landejer_name" data-aos="fade-up" data-aos-delay="100">
-                                    <?php the_field('landejer_name'); ?>
-                                </div>
-                            <?php endif; ?>
-                            <div class="landejer_top" data-aos="fade-up" data-aos-delay="200">
-                                <?php if( get_field('landejer_title') ): ?>
-                                    <div class="landejer_title">
-                                        <?php the_field('landejer_title'); ?>
+                    <div class="landejer_block">
+                        <div class="landejer_content_wrapper">
+                            <div class="landejer_content content_width">
+                                <?php if( get_field('landejer_name') ): ?>
+                                    <div class="landejer_name" data-aos="fade-up" data-aos-delay="100">
+                                        <?php the_field('landejer_name'); ?>
                                     </div>
                                 <?php endif; ?>
-                                <?php if( get_field('landejer_image') ): ?>
-                                    <div class="landejer_image">
-                                        <img src="<?php the_field('landejer_image'); ?>" alt="img">
-                                    </div>
-                                <?php endif; ?>
-                            </div>
-
-                            <div class="landejer_app">
-                                <div class="landejer_app_content">
-                                    <?php if( get_field('landejer_phone') ): ?>
-                                        <div class="landejer_phone">
-                                            <img data-aos="fade-up" data-aos-delay="250" src="<?php the_field('landejer_phone'); ?>" alt="img">
+                                <div class="landejer_top" data-aos="fade-up" data-aos-delay="200">
+                                    <?php if( get_field('landejer_title') ): ?>
+                                        <div class="landejer_title">
+                                            <?php the_field('landejer_title'); ?>
                                         </div>
                                     <?php endif; ?>
-                                    <div class="landejer_app_info">
-                                        <?php if( have_rows('landejer_rated') ): ?>
-
-                                            <div class="landejer_rated">
-                                                <?php if( get_field('landejer_app_title') ): ?>
-                                                    <div class="landejer_app_title">
-                                                        <?php the_field('landejer_app_title'); ?>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <div class="landejer_rated_list">
-                                                    <?php while( have_rows('landejer_rated') ): the_row();  $image = get_sub_field('logo'); ?>
-                                                        <div class="landejer_rated_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
-                                                            <div class="landejer_rated_logo">
-                                                                <img src="<?php echo $image; ?>" alt="logo">
-                                                            </div>
-                                                            <div class="landejer_rated_title"><?php the_sub_field('landejer_rated_title'); ?></div>
-                                                        </div>
-                                                    <?php endwhile; ?>
-                                                </div>
-                                            </div>
-                                        <?php endif; ?>
-                                        <?php if( have_rows('landejer_indtjening') ): ?>
-                                            <div class="landejer_indtjening">
-                                                <?php if( get_field('landejer_indtjening_title') ): ?>
-                                                    <div class="landejer_indtjening_title" data-aos="fade-up" data-aos-delay="300">
-                                                        <?php the_field('landejer_indtjening_title'); ?>
-                                                    </div>
-                                                <?php endif; ?>
-                                                <div class="landejer_indtjening_list" data-aos="fade-up" data-aos-delay="350">
-                                                    <?php while( have_rows('landejer_indtjening') ): the_row(); ?>
-                                                        <div class="landejer_indtjening_item" >
-                                                            <div class="landejer_indtjening_info" style="color:<?php the_sub_field('text_color'); ?>/*/*; height: */*/<?php the_sub_field('height_colum'); ?>/*/*px; background-color: */*/<?php the_sub_field('landejer_indtjening_bg'); ?> ">
-                                                                <?php the_sub_field('landejer_indtjening_info'); ?>
-                                                            </div>
-                                                        </div>
-                                                    <?php endwhile; ?>
-                                                </div>
-                                            </div>
-                                        <?php endif; ?>
-                                    </div>
+                                    <?php if( get_field('landejer_image') ): ?>
+                                        <div class="landejer_image">
+                                            <img src="<?php the_field('landejer_image'); ?>" alt="img">
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
-                                <?php if( have_rows('landejer_app_list') ): ?>
-                                    <div class="landejer_app_list">
-                                        <?php while( have_rows('landejer_app_list') ): the_row(); ?>
-                                            <div class="landejer_app_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
-                                                <?php the_sub_field('landejer_app_item'); ?>
-                                            </div>
-                                        <?php endwhile; ?>
-                                    </div>
-                                <?php endif; ?>
 
+                                <div class="landejer_app">
+                                    <div class="landejer_app_content">
+                                        <?php if( get_field('landejer_phone') ): ?>
+                                            <div class="landejer_phone">
+                                                <img data-aos="fade-up" data-aos-delay="250" src="<?php the_field('landejer_phone'); ?>" alt="img">
+                                            </div>
+                                        <?php endif; ?>
+                                        <div class="landejer_app_info">
+                                            <?php if( have_rows('landejer_rated') ): ?>
+
+                                                <div class="landejer_rated">
+                                                    <?php if( get_field('landejer_app_title') ): ?>
+                                                        <div class="landejer_app_title">
+                                                            <?php the_field('landejer_app_title'); ?>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                    <div class="landejer_rated_list">
+                                                        <?php while( have_rows('landejer_rated') ): the_row();  $image = get_sub_field('logo'); ?>
+                                                            <div class="landejer_rated_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
+                                                                <div class="landejer_rated_logo">
+                                                                    <img src="<?php echo $image; ?>" alt="logo">
+                                                                </div>
+                                                                <div class="landejer_rated_title"><?php the_sub_field('landejer_rated_title'); ?></div>
+                                                            </div>
+                                                        <?php endwhile; ?>
+                                                    </div>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if( have_rows('landejer_indtjening') ): ?>
+                                                <div class="landejer_indtjening">
+                                                    <?php if( get_field('landejer_indtjening_title') ): ?>
+                                                        <div class="landejer_indtjening_title" data-aos="fade-up" data-aos-delay="300">
+                                                            <?php the_field('landejer_indtjening_title'); ?>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                    <div class="landejer_indtjening_list" data-aos="fade-up" data-aos-delay="350">
+                                                        <?php while( have_rows('landejer_indtjening') ): the_row(); ?>
+                                                            <div class="landejer_indtjening_item" >
+                                                                <div class="landejer_indtjening_info" style="color:<?php the_sub_field('text_color'); ?>/*/*; height: */*/<?php the_sub_field('height_colum'); ?>/*/*px; background-color: */*/<?php the_sub_field('landejer_indtjening_bg'); ?> ">
+                                                                    <?php the_sub_field('landejer_indtjening_info'); ?>
+                                                                </div>
+                                                            </div>
+                                                        <?php endwhile; ?>
+                                                    </div>
+                                                </div>
+                                            <?php endif; ?>
+                                        </div>
+                                    </div>
+                                    <?php if( have_rows('landejer_app_list') ): ?>
+                                        <div class="landejer_app_list">
+                                            <?php while( have_rows('landejer_app_list') ): the_row(); ?>
+                                                <div class="landejer_app_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
+                                                    <?php the_sub_field('landejer_app_item'); ?>
+                                                </div>
+                                            <?php endwhile; ?>
+                                        </div>
+                                    <?php endif; ?>
+
+                                </div>
                             </div>
                         </div>
+
                         <?php if( have_rows('hunter_hiw') ): ?>
-                            <div class="landejer_hiw">
-                                <div class="sticky_blur"></div>
+                            <div class="landejer_hiw_wrapper">
+<!--                                <div class="sticky_blur"></div>-->
                                 <?php if( get_field('hunter_hiw_title') ): ?>
                                     <div class="landejer_hiw_title">
                                         <?php the_field('hunter_hiw_title'); ?>
                                     </div>
                                 <?php endif; ?>
-                                <?php while( have_rows('hunter_hiw') ): the_row();  $image = get_sub_field('logo'); ?>
-                                    <div class="landejer_hiw_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
-                                        <div class="landejer_hiw_num"><?php the_sub_field('number'); ?></div>
-                                        <div class="landejer_hiw_text_img">
-                                            <div class="landejer_hiw_text"><?php the_sub_field('text'); ?></div>
-                                            <div class="landejer_hiw_img"><img src="<?php echo $image; ?>" alt="logo"></div>
+                                <div class="landejer_hiw">
+
+                                    <?php while( have_rows('hunter_hiw') ): the_row();  $image = get_sub_field('logo'); ?>
+                                        <div class="landejer_hiw_item" data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00">
+                                            <div class="landejer_hiw_num"><?php the_sub_field('number'); ?></div>
+                                            <div class="landejer_hiw_text_img">
+                                                <div class="landejer_hiw_text"><?php the_sub_field('text'); ?></div>
+                                                <div class="landejer_hiw_img"><img src="<?php echo $image; ?>" alt="logo"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                <?php endwhile; ?>
+                                    <?php endwhile; ?>
+
+                                </div>
+<!--                                <div class="sticky_blur_down"></div>-->
                             </div>
                         <?php endif; ?>
                     </div>
                 </div>
             </div>
             <div class="sticky tabs">
-                <span class="tab">Jæger <img src="/wp-content/uploads/2022/04/Jaeger.svg" alt="Jæger"></span>
-                <span class="tab">Landejer <img src="/wp-content/uploads/2022/04/Landejer.svg" alt="Jæger"></span>
+                <span id="tab_left" class="tab tab_left active">Jæger <img src="/wp-content/uploads/2022/04/Jaeger.svg" alt="Jæger"></span>
+                <span id="tab_right" class="tab tab_right">Landejer <img src="/wp-content/uploads/2022/04/Landejer.svg" alt="Jæger"></span>
             </div>
         </section>
-
     </div>
-    <div class="sticky_tabs_padding active">
+    <div class="sticky_tabs_padding"></div>
 
-    </div>
 
     <section class="black_logos">
         <div class="black_logos_block content_width">
@@ -329,29 +340,11 @@ get_header(); ?>
                 <?php if( have_rows('back_logos_slider') ): ?>
                     <div class="black_logos_slider" data-aos="fade-up" data-aos-delay="200">
                         <?php while( have_rows('back_logos_slider') ): the_row();  $image = get_sub_field('image'); ?>
-                            <div class="black_logo" style="background-image: url(<?php echo $image; ?>)">
-<!--                                <img src="--><?php //echo $image; ?><!-- " alt="img">-->
-                            </div>
-                        <?php endwhile; ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </div>
-    </section>
-    <section class="partnerships_logos">
-        <div class="partnerships_logos_block content_width">
-            <div class="partnerships_logos_content">
-                <?php if( get_field('partnerships_logos_title') ): ?>
-                    <div class="partnerships_logos_title" data-aos="fade-up" data-aos-delay="100">
-                        <?php the_field('partnerships_logos_title'); ?>
-                    </div>
-                <?php endif; ?>
-                <?php if( have_rows('partnerships_logos_slider') ): ?>
-                    <div class="partnerships_logos_slider" data-aos="fade-up" data-aos-delay="200">
-                        <?php while( have_rows('partnerships_logos_slider') ): the_row();  $image = get_sub_field('image'); ?>
-                            <div class="partnerships_logo" style="background-image: url( <?php echo $image; ?>)">
-<!--                                <img src="--><?php //echo $image; ?><!--" alt="img">-->
-                            </div>
+                            <a href="<?php the_sub_field('link'); ?>">
+                                <div class="black_logo" style="background-image: url(<?php echo $image; ?>)">
+                                    <!--                                <img src="--><?php //echo $image; ?><!-- " alt="img">-->
+                                </div>
+                            </a>
                         <?php endwhile; ?>
                     </div>
                 <?php endif; ?>
@@ -501,6 +494,29 @@ get_header(); ?>
                         <?php endforeach; ?>
                     </div>
                     <?php wp_reset_postdata(); ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </section>
+
+    <section class="partnerships_logos">
+        <div class="partnerships_logos_block content_width">
+            <div class="partnerships_logos_content">
+                <?php if( get_field('partnerships_logos_title') ): ?>
+                    <div class="partnerships_logos_title" data-aos="fade-up" data-aos-delay="100">
+                        <?php the_field('partnerships_logos_title'); ?>
+                    </div>
+                <?php endif; ?>
+                <?php if( have_rows('partnerships_logos_slider') ): ?>
+                    <div class="partnerships_logos_slider" data-aos="fade-up" data-aos-delay="200">
+                        <?php while( have_rows('partnerships_logos_slider') ): the_row();  $image = get_sub_field('image'); ?>
+                            <a href="<?php the_sub_field('link'); ?>">
+                                <div class="partnerships_logo" style="background-image: url( <?php echo $image; ?>)">
+                                    <!--                                <img src="--><?php //echo $image; ?><!--" alt="img">-->
+                                </div>
+                            </a>
+                        <?php endwhile; ?>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>

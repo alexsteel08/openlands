@@ -51,8 +51,8 @@ jQuery(document).ready(function ($) {
         adaptiveHeight: false,
         touchThreshold: 10,
         autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 500,
+        autoplaySpeed: 2000,
+        speed: 1500,
         dots: false,
         responsive: [
             {
@@ -101,8 +101,8 @@ jQuery(document).ready(function ($) {
         adaptiveHeight: false,
         touchThreshold: 10,
         autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 500,
+        autoplaySpeed: 2000,
+        speed: 1500,
         dots: false,
         responsive: [
             {
@@ -152,8 +152,8 @@ jQuery(document).ready(function ($) {
         adaptiveHeight: false,
         touchThreshold: 10,
         autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 500,
+        autoplaySpeed: 2000,
+        speed: 1500,
         dots: false,
         responsive: [
             {
@@ -431,16 +431,6 @@ jQuery(function ($) {
 });
 
 
-jQuery(function ($) {
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top + -130
-        }, 1500);
-    });
-
-});
-
 
 jQuery(document).ready(function ($) {
     $(function () {
@@ -469,40 +459,6 @@ jQuery(document).ready(function ($) {
 });
 
 
-jQuery(document).ready(function ($) {
-
-    setShareLinks();
-
-    function socialWindow(url) {
-        var left = (screen.width - 570) / 2;
-        var top = (screen.height - 570) / 2;
-        var params = "menubar=no,toolbar=no,status=no,width=570,height=570,top=" + top + ",left=" + left;
-        window.open(url, "NewWindow", params);
-    }
-
-    function setShareLinks() {
-        var pageUrl = encodeURIComponent(document.URL);
-        var tweet = encodeURIComponent($("meta[property='og:description']").attr("content"));
-
-        $(".social-share.facebook").on("click", function () {
-            url = "https://www.facebook.com/sharer.php?u=" + pageUrl;
-            socialWindow(url);
-        });
-
-        $(".social-share.twitter").on("click", function () {
-            url = "https://twitter.com/intent/tweet?url=" + pageUrl + "&text=" + tweet;
-            socialWindow(url);
-        });
-
-        $(".social-share.linkedin").on("click", function () {
-            url = "https://www.linkedin.com/shareArticle?mini=true&url=" + pageUrl;
-            socialWindow(url);
-        })
-    }
-
-
-});
-
 
 jQuery(document).ready(function ($) {
     $(document).ready(function () {
@@ -511,47 +467,64 @@ jQuery(document).ready(function ($) {
 });
 
 
-jQuery(document).ready(function ($) {
-    $(document).ready(function () {
-        $(".wrapper .tab").click(function () {
-            $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
-            $(".sticky_tabs_padtop").removeClass("active").eq($(this).index()).addClass("active");
-            $(".sticky_tabs_padding").removeClass("active").eq($(this).index()).addClass("active");
-            $(".sticky_blur").removeClass("active").eq($(this).index()).addClass("active");
-            $(".tab_item").hide().eq($(this).index()).fadeIn({
-                duration: 0
-            })
-        }).eq(0).addClass("active");
-    });
-});
+// jQuery(document).ready(function ($) {
+//     $(document).ready(function () {
+//         $(".wrapper .tab").click(function () {
+//             $(".wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+//             $(".sticky_tabs_padtop").removeClass("active").eq($(this).index()).addClass("active");
+//             $(".sticky_tabs_padding").removeClass("active").eq($(this).index()).addClass("active");
+//             $(".sticky_blur").removeClass("active").eq($(this).index()).addClass("active");
+//             $(".tab_item").hide().eq($(this).index()).fadeIn({
+//                 duration: 0
+//             })
+//         }).eq(0).addClass("active");
+//     });
+// });
 
 
+
 jQuery(document).ready(function ($) {
     $(document).ready(function () {
-        $('#leftside').hover(function () {
-                $('.gp_left_image_hover').addClass('active_left');
-                $('.gp_left_list').addClass('active_left');
-                $('.gp_left').addClass('active_left');
-            },
-            function () {
-                $('.gp_left_image_hover').removeClass('active_left');
-                $('.gp_left_list').removeClass('active_left');
-                $('.gp_left').removeClass('active_left');
-            });
-        $('#rightside').hover(function () {
-                $('.gp_right_image_hover').addClass('active_right');
-                $('.gp_right_list').addClass('active_right');
-                $('.gp_left_image_hover').removeClass('active_left');
-                $('.gp_left_list').removeClass('active_left');
-                $('.gp_left').removeClass('active_left');
-            },
-            function () {
-                $('.gp_right_image_hover').removeClass('active_right');
-                $('.gp_right_list').removeClass('active_right');
-                $('.gp_left_image_hover').addClass('active_left');
-                $('.gp_left_list').addClass('active_left');
-                $('.gp_left').addClass('active_left');
-            });
+        $('#leftside, #tab_left').on('click', function(){
+            $('.gp_left').addClass('active_left');
+            $('.gp_right').removeClass('active_right');
+            $('.gp_left_list').addClass('active_left');
+            $('.gp_right_list').removeClass('active_right');
+            $('.gp_right_image_hover').removeClass('active_right');
+            $('.gp_left_image_hover').addClass('active_left');
+            $('.tab_left').addClass('active');
+            // $('.sticky_tabs').addClass('hunter_color');
+            // $('.sticky_tabs').removeClass('landejer_color');
+            $('.sticky_tabs_padtop').addClass('active');
+            $('.sticky_tabs_padding').addClass('active');
+            $('.hunter_content_wrapper').addClass('hunter_color');
+            $('.sticky_tabs_padding').removeClass('hunter_color');
+            $('.sticky_tabs_block').removeClass('hunter_color');
+            $('.tab_right').removeClass('active');
+            $('.sticky_blur').removeClass('active');
+            $('.sticky_blur_down').removeClass('active');
+            $('.hunter').show();
+            $('.landejer').hide();
+
+        });
+
+        $('#rightside, #tab_right').on('click', function(){
+            $('.gp_right_list').addClass('active_right');
+            $('.gp_right').addClass('active_right');
+            $('.gp_right_image_hover').addClass('active_right');
+            $('.gp_left_list').removeClass('active_left');
+            $('.gp_left').removeClass('active_left');
+            $('.tab_left').removeClass('active');
+            $('.tab_right').addClass('active');
+            $('.sticky_tabs_block').addClass('hunter_color');
+            $('.sticky_tabs_padding').addClass('hunter_color');
+            $('.sticky_tabs_padtop').removeClass('active');
+            $('.sticky_tabs_padding').removeClass('active');
+            $('.sticky_blur').addClass('active');
+            $('.sticky_blur_down').addClass('active');
+            $('.hunter').hide();
+            $('.landejer').show();
+        });
     });
 });
 

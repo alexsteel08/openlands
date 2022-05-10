@@ -12,6 +12,18 @@
                   <?php the_field('cta_shortcode','option'); ?>
                </div>
             <?php endif; ?>
+            <div class="cta_logos_mobile">
+                <?php if( have_rows('logos_app','option') ): ?>
+                    <div class="footer_app_logos">
+                        <?php while( have_rows('logos_app','option') ): the_row();  $image = get_sub_field('logo'); ?>
+                            <div class="footer_app_logo">
+                                <a href="<?php the_sub_field('link'); ?>"><img src="<?php echo $image; ?>" alt="app logo"></a>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+            </div>
+
         </div>
     </div>
 </section>

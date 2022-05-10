@@ -137,6 +137,8 @@
 
 /* Слайд основной */
 .slick-slide.slick-current {
+    margin-left: 0px;
+    background-position: center left;
 }
 
 /* Слайд по центру */

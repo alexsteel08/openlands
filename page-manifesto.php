@@ -14,6 +14,21 @@ get_header(); ?>
                 <div class="overlay"></div>
                 <h1 class="team_title"><?php the_field('title'); ?></h1>
             </div>
+<!--            <section class="black_logos">-->
+<!--                <div class="black_logos_block content_width">-->
+<!--                    <div class="black_logos_content">-->
+<!--                        --><?php //if( have_rows('logos') ): ?>
+<!--                            <div class="logos" data-aos="fade-up" data-aos-delay="200">-->
+<!--                                --><?php //while( have_rows('logos') ): the_row();  $image = get_sub_field('image'); ?>
+<!--                                    <div class="logo">-->
+<!--                                        <img src="--><?php //echo $image; ?><!--" alt="img">-->
+<!--                                    </div>-->
+<!--                                --><?php //endwhile; ?>
+<!--                            </div>-->
+<!--                        --><?php //endif; ?>
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </section>-->
             <section class="manifesto manifesto_page">
                 <div class="manifesto_block content_width">
                     <div class="manifesto_content">
@@ -53,23 +68,14 @@ get_header(); ?>
                                     <?php the_field('line_6'); ?>
                                 </div>
                             <?php endif; ?>
-                        </div>
 
-<!--                        --><?php
-//                        $images = get_field('gallery_images');
-//                        if( $images ): ?>
-<!--                            <div class="gallery_images gallery_manifesto" data-aos="fade-up" data-aos-delay="100">-->
-<!--                                <ul>-->
-<!--                                    --><?php //foreach( $images as $image ): ?>
-<!--                                        <li>-->
-<!--                                            <a href="--><?php //echo esc_url($image['url']); ?><!--">-->
-<!--                                                <img src="--><?php //echo esc_url($image['sizes']['large']); ?><!--" alt="--><?php //echo esc_attr($image['alt']); ?><!--" />-->
-<!--                                            </a>-->
-<!--                                        </li>-->
-<!--                                    --><?php //endforeach; ?>
-<!--                                </ul>-->
-<!--                            </div>-->
-<!--                        --><?php //endif; ?>
+
+                            <?php if( get_field('manifesto_text') ): ?>
+                                <div class="manifesto_text">
+                                    <?php the_field('manifesto_text'); ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -78,21 +84,7 @@ get_header(); ?>
                    <img src="<?php the_field('full_width_image'); ?>" alt="img">
                </section>
             <?php endif; ?>
-            <section class="black_logos">
-                <div class="black_logos_block content_width">
-                    <div class="black_logos_content">
-                        <?php if( have_rows('logos') ): ?>
-                            <div class="logos" data-aos="fade-up" data-aos-delay="200">
-                                <?php while( have_rows('logos') ): the_row();  $image = get_sub_field('image'); ?>
-                                    <div class="logo">
-                                        <img src="<?php echo $image; ?>" alt="img">
-                                    </div>
-                                <?php endwhile; ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </section>
+
         </div>
     </div>
 </section>
